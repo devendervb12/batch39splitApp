@@ -1,0 +1,50 @@
+{
+ "sap.app" :{
+      "id" : "com.smax.batch39.ex2",
+      "dataSources" : {
+            "smaxService" : {
+               "uri" : "proxy/https/services.odata.org/V2/Northwind/Northwind.svc/"
+            }
+      }
+ },
+ "sap.ui5" : {
+ 		"rootView" : "com.smax.batch39.ex2.view.SApp",
+ 		"models" : {
+ 		    "" : {
+ 		      "dataSource" : "smaxService"
+ 		    }
+ 		},
+		"routing" : {
+			"config" : {
+				"viewType" : "XML",
+				"viewPath" : "com.smax.batch39.ex2.view",
+				"routerClass" : "sap.m.routing.Router",
+				"controlId" : "idApp"
+			},
+			"routes" : [
+			          {
+			        	"pattern" : "",
+			        	"name" : "FirstPage",
+			        	"target" : ["mPage", "dPage"]			        	
+			          },
+			          {
+			        	 "pattern" : "toDetail/{custID}",
+			        	 "name" : "SecondPage",
+			        	 "target" : ["mPage", "dPage"]
+			          }
+			          ],
+		 "targets" : {
+			  "mPage" : {
+				  "viewName" : "Page1",
+				  "controlAggregation" : "masterPages"
+			  },
+			  "dPage" : {
+				  "viewName" : "Page2",
+				  "controlAggregation" : "detailPages"
+			  }
+			 
+		 }	          
+		}
+ 
+ }
+}

@@ -1,0 +1,11 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="com.smax.batch39.ex2.controller.SApp" xmlns:html="http://www.w3.org/1999/xhtml">
+	<SplitApp id="idApp">
+	   <!--  <masterPages>
+	         <Page title="Page1"/>
+	    </masterPages>
+	    <detailPages>
+	        <Page title="Page2"/>
+	    </detailPages> -->
+	</SplitApp>
+</core:View>
